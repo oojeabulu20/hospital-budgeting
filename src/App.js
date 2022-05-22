@@ -19,7 +19,7 @@ function App() {
           alignItems:"flex-start",
       }}></div>
       {/** Importing the budget card component into our application*/}
-      <BudgetCard name="Covid Tests" amount={200000} max={1000000}></BudgetCard>
+      <BudgetCard name="Covid Tests" amount={900000} max={1000000}></BudgetCard>
     </Container>
   );
 }
