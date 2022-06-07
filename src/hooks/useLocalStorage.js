@@ -1,5 +1,4 @@
 //storing the data locally so that we dont lose the data when we come out of the page
-//25 Mins
 import { useState, useEffect } from "react";
 
 export function useLocalStorage(key, defaultValue) {
