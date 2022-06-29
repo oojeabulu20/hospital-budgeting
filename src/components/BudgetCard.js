@@ -13,7 +13,7 @@ export default function BudgetCard({ name, amount, max, gray, onAddExpenseClick,
     //this is where we will store all the details about each particular budget 
     //we pass in the name of the budget, the amount and the max amount in that budget
   return (
-      <Card className={classnames.join(" ")}>
+      <Card data-testid="budget" className={classnames.join(" ")}>
           <Card.Body>
               <Card.Title className="d-flex justify-content-between align-items-baseline fw-normal mb-3">
                   <div className="me-2">{name}</div>
@@ -39,7 +39,7 @@ export default function BudgetCard({ name, amount, max, gray, onAddExpenseClick,
 
 function getProgressBarVariant(amount, max) {
     const ratio = amount / max
-    if (ratio < 0.5) return "primary" //if the expense is 50% of the budget return the primary colour
-    if (ratio < 0.75) return "warning" //if the expense is 75% of the budget return the warning colour
-    return "danger" //otherwise return the danger colour
+    if (ratio < 0.5) return "success" //if the expense is 50% of the budget return the success colour(green)
+    if (ratio < 0.75) return "warning" //if the expense is 75% of the budget return the warning colour(orange)
+    return "danger" //otherwise return the danger colour(red)
 }

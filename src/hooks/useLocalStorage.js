@@ -13,9 +13,10 @@ export function useLocalStorage(key, defaultValue) {
         }
     })
 
+    //use effect to handle the change
     useEffect(() => {
       localStorage.setItem(key, JSON.stringify(value))
-    }, [key, value])
+    }, [key, value]) //setting the storage as key,value
     
     return [value, setValue]
 }

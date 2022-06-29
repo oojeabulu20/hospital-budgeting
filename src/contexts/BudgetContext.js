@@ -43,7 +43,6 @@ export const BudgetsProvider = ({ children }) => {
         })
     }
 
-    //
     function deleteExpense({id}) {
         setExpense(prevExpenses => {
             return prevExpenses.filter(expense => expense.id !== id)

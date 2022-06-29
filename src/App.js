@@ -27,7 +27,7 @@ function App() {
     //the header for our page
     <>
     
-    <Container className="my-4"> 
+    <Container data-testid="app" className="my-4"> 
       <Stack direction="horizontal" gap="2" className="mb-4">
         <h1 className="me-auto">Hospital Budgets</h1> {/*Keeps the page response when the page is expanded and reduced*/}
         <Button variant="primary" onClick={() => setShowAddBudgetModal(true)}>Add Budget</Button> 
